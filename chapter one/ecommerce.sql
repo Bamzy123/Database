@@ -1,0 +1,7 @@
+CREATE TABLE orders (
+	id SERIAL PRIMARY KEY,
+    userid BIGINT UNSIGNED,
+    orderdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    totalAmount DECIMAL(10, 2),
+    FOREIGN KEY (userid) REFERENCES users(id)
+)
